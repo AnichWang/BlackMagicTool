@@ -47,6 +47,16 @@ def persistent_data(json_data):
         database_tool(t)
 
 
+def parse_coupon_info(business):
+    """
+    :param business: 业务信息，
+        业务字段(bid)枚举：
+            电商:1，机票:2，火车票:3，酒店:4，特权卡:6，专车:7，门票:8
+    :return:
+    """
+    pass
+
+
 if __name__ == "__main__":
 
     fetch_url = 'http://cos.ultimavip.org/project/remote/coupon/%2F1.0%2Fcoupon%2Fcoupon%2FgetCoupons/false/form'
