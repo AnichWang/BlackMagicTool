@@ -1,8 +1,11 @@
 from urllib import request, parse
 import json
 import sqlite3
-import time,datetime
+import time
 
+"""
+礼券数据截止到12月19日，共993条礼券数据
+"""
 
 def fetch_coupon_data(url, form_data):
     req = request.Request(url)
@@ -46,11 +49,9 @@ def persistent_data(json_data):
 
 if __name__ == "__main__":
 
-    # database_tool({'bid': 2, 'created': 1545118543209, 'id': 1075, 'name': '机票无门槛', 'receivedNum': 0, 'sendNum': 0, 'status': False, 'totalMoney': 0, 'totalNum': 0, 'type': 1, 'url': '', 'useNum': 0, 'validity': ''})
-
     fetch_url = 'http://cos.ultimavip.org/project/remote/coupon/%2F1.0%2Fcoupon%2Fcoupon%2FgetCoupons/false/form'
 
-    for i in range(1, 3):
+    for i in range(1, 101):
         print('开始获取第', i, '页数据')
         coupon_data = parse.urlencode([('pageNum', i)])
         result = fetch_coupon_data(fetch_url, coupon_data)
