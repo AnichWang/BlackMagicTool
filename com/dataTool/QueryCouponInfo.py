@@ -51,7 +51,7 @@ def parse_coupon_info(business):
     """
     :param business: 业务信息，
         业务字段(bid)枚举：
-            电商:1，机票:2，火车票:3，酒店:4，特权卡:6，专车:7，门票:8
+            机票:2，火车票:3，酒店:4，专车:7，门票:8
     :return:
     """
     pass
