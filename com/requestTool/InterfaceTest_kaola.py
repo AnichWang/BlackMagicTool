@@ -1,7 +1,14 @@
 from urllib import request, parse
 import json
+import time
 
 if __name__ == "__main__":
+
+    # 获取时间戳
+    t = time.time()
+    time_second = int(t)   # 秒级时间戳
+    print(time_second)
+
     req = request.Request('http://oauthuc-test.supergina.cn/user/sendCoupon')
     #phone = "13301165332"
     phone = "17710324432"
@@ -11,7 +18,7 @@ if __name__ == "__main__":
                             "requestId":"nsjdl",
                             "sign": sign,
                             "appkey":"f47967e9e88a3644",
-                            "timestamp":1545209593})
+                            "timestamp": 1546072596})
     format_data = bytes(json_data, 'utf8')
 
     req.add_header('Content-Type', 'application/json')

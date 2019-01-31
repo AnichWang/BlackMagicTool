@@ -12,7 +12,7 @@ def add_to_16(text):
 
 key = '99b2bc8c31e45118'  # 密码
 
-text = 'appkey=f47967e9e88a3644&phone=13301165332&requestId=nsjdl&timestamp=1545209593'  # 待加密文本
+text = 'appkey=f47967e9e88a3644&phone=13301165332&requestId=nsjdl&timestamp=1546072596'  # 待加密文本
 
 to_encrypted_text = 'NCLQ49zd2Nuq6vZ9R9/F/YU0J7rXqQvoQeTufhY5R1h+Be4xQM1/2THd9zGx8syABfhoES2y7jp8N6dSiIIpPOXzmveEJAsaJSPE9JFcFFw\\u003d' # 待解密文本
 

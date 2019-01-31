@@ -51,12 +51,12 @@ select couponNum as "礼券id", count(orderNum) as "使用总数量", SUM(coupon
 select couponNum as "礼券id", count(orderNum) as "使用总数量", SUM(couponAmount) as "使用总金额" from orderInfo_all where 
     couponNum in (select couponid from coupon_info where bid in(2))
     and orderStatus in (20,22,30)
-    and orderTime >= "2018-11-01" and orderTime < "2018-12-01"
+    and orderTime >= '2018-11-01' and orderTime < '2018-12-01'
     group by couponNum;  
 
 -- 总未使用礼券
 select couponid from coupon_info where bid = 2
-    and created >= 2018-07-01
+    and created >= '2018-07-01'
     and couponid not in(select couponNum from orderInfo_all);
     
 
